@@ -8,7 +8,7 @@
 # Site settings
 title: Trytek Systems
 email: stephen.murby@tryteksystems.co.uk
-description: Personal blog following through my journey from a graduate software engineer.
+description: A personal blog following through my journey from a graduate software engineer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tryteksystems.co.uk" # the base hostname & protocol for your site
 twitter_username: stephen_murby
