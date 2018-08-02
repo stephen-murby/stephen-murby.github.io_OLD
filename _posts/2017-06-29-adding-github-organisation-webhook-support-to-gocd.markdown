@@ -8,7 +8,7 @@ The bulk of our active codebases, over time, have made their home our GitHub Ent
 
 We had an appetite to trigger our pipeline builds instead by a GitHub push notification. However, the only way of doing this was to use the [GitHub GoCD service integration](https://github.com/github/github-services/blob/master/docs/gocd), secured with basic authentication for each repository. To do this across 2,500 pipelines we thought would be unmanageable as each team would have to remember a) to do this for each of their projects and b) enter their own credentials.
 
-<img style="float:right; width: 15em;" src="{{ site.github.url }}/images/2017-06-29/gihub-to-gocd.svg">
+<img style="float:right; width: 15em;" src="{{ site.github.url }}/images/2017-06-29/github-to-gocd.svg">
 
 ## Early days
 I talked to ThoughtWorks [(here)](https://github.com/gocd/gocd/issues/217) and proposed a community plugin to support GitHub organisation webhook messages. Other people had gone down the route of writing a custom proxy to handle the disparity between the messages emitted for a GitHub organisation, and those expected by GoCD `notify` endpoint. I felt it would be more beneficial to write something that benefited everyone rather than just our own use case. After a small code spike and a little digging around in the GoCD core, I found that it was not possible to do this with a plugin. Instead I was going to have to make a change to GoCD core and send them over a pull request.
